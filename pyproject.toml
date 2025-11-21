@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LuminaDB_worker"
+description = "Worker thread extension for LuminaDB"
+authors = [
+    {name = "Rimu Eirnarn", email = "rimuru720@proton.me"}
+]
+keywords = ["sqlite", "sqlite3"]
+readme = "README.md"
+requires-python = ">=3.11"
+license = "BSD-3-Clause"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython"
+]
+dynamic = ["version"]
+dependencies = [
+    "luminadb"
+]
+
+[project.urls]
+Homepage = "https://github.com/RimuEirnarn/luminadb_worker"
+Documentation = "https://luminadb.rtfd.io"
+Repository = "https://github.com/RimuEirnarn/luminadb.git"
+
+[tool.setuptools]
+zip-safe = true
+
+[project.optional-dependencies]
+dev = ["pytest", "pylint", "black"]
+docs = ['sphinx', 'myst_parser']
